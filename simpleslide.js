@@ -11,7 +11,6 @@ function simple_slide(app){
 		app.lis=$("li", app.ul);
 		app.w= $(app.lis[0]).width();
 		app.wContent= app.lis.length * app.w;
-		// console.log($(lis[0]).width());
 		app.ul.css({ // set width para el ul
 			"width": app.wContent
 		});
