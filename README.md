@@ -9,7 +9,7 @@ This is a simple template for slide.js
 * [Jquery](http://api.jquery.com/)
 * [Jquery.easing](http://gsgd.co.uk/sandbox/jquery/easing/)
 
-## Explaple
+## Example
 
 
 ### CSS
