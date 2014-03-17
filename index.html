@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Template Slide</title>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type">
+<!--[if lt IE 9]>   
+<script type="text/javascript">
+  // create elements HTML5 for IE
+  document.createElement("article");
+  document.createElement("section");
+  document.createElement("footer");
+  document.createElement("header");
+  document.createElement("hgroup");
+  document.createElement("nav");
+</script>
+ <![endif]-->
+
+<style type="text/css">
+	body, html, *{padding: 0;border: none} /*reset*/
+	#app {position: relative; overflow: hidden; }
+	#app, div#slide, ul#list li {width: 640px;  height: 480px } /* heigth de la app */
+	div#slide { overflow: hidden; left:30px; }
+	ul#list { overflow: hidden;}
+	ul#list li { overflow: hidden; float: left; }
+	div#app a.btn { display: none;}
+	a.btn { position: absolute; top: 30px; display: inline-block; padding: 5px 10px; background: rgba(100, 100, 100, 0.4); color: #fff; cursor: pointer; border-radius: 4px;}
+	a.btn:hover { background: rgba(100, 100, 100, 0.8); }
+	a.prev { left: 0}
+	a.next { right: 0}
+</style>
+
+</head>
+<body>
+
+
+		<section id="app">
+			<a class="btn prev">PREV</a>
+			<div id="slide">
+				<ul id="list">
+					<li><img src="http://2.bp.blogspot.com/-hdKNFUbF94Q/UKN66_HXkFI/AAAAAAABD3k/LsrWRdhrHmg/s1600/la+foto+2+%2528Small%2529.JPG" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRbOH5IIaCmh7oA5m3XIvzjO2HKUCeDcA6VjF-wMq7GmYdlwgbj" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRuzTPmVLRaoOTWUeEs7qKLCZzXuVmbiAj5kzcqTj3_E2v--5Bylg" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTlFLHHR6tke3oF-tNAccGTc29-fv8_ZWvugcO6N72rznhXHvgvpQ" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcR8eiXRhBUzyJSNahit6ngTnOFF9f9zeLc_HrML5hdnW86jRGZV" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRvKU4wFzLxjzj9cSR5HtHZDFrsJJ5WbggyVs2-4OS0ZeLPyD64wg" width="640" height="480"></li>
+					<li><img src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcS3J5qUZ0TpNcMVgbGpYbT2d2_A7w3lCZd0atjwsCQ2290LuY0bHw" width="640" height="480"></li>
+				</ul>
+			</div>
+			<a class="btn next">NEXT</a>
+		</section>
+			
+		
+
+<script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
+<script src="simpleslide.min.js"></script>
+
+<script type="text/javascript">
+
+	$(function(){ //script de la app
+		var config= { // configuracion slide
+			"ul" : $("ul#list"),
+			"next":$("a.next"),
+			"prev":$("a.prev"),
+			"efecto_animacion":"easeInOutElastic"
+		}
+
+		var slide= simple_slide(config); //start slide
+	});
+
+		// list efects
+		// requiere jquery.easing.min.js
+		// var efectos= {
+		// 	"efect_1":"linear",
+		// 	"efect_2":"swing",
+		// 	"efect_3":"easeInQuad",
+		// 	"efect_4":"easeOutQuad",
+		// 	"efect_5":"easeInOutQuad",
+		// 	"efect_6":"easeInCubic",
+		// 	"efect_7":"easeOutCubic",
+		// 	"efect_8":"easeInOutCubic",
+		// 	"efect_9":"easeInQuart",
+		// 	"efect_10":"easeInOutQuart",
+		// 	"efect_11":"easeInQuint",
+		// 	"efect_12":"easeOutQuint",
+		// 	"efect_13":"easeInOutQuint",
+		// 	"efect_14":"easeInExpo",
+		// 	"efect_15":"easeOutExpo",
+		// 	"efect_16":"easeInOutExpo",
+		// 	"efect_17":"easeInSine",
+		// 	"efect_18":"easeOutSine",
+		// 	"efect_19":"easeInOutSine",
+		// 	"efect_20":"easeInCirc",
+		// 	"efect_21":"easeOutCirc",
+		// 	"efect_22":"easeInOutCirc",
+		// 	"efect_23":"easeInElastic",
+		// 	"efect_24":"easeOutElastic",
+		// 	"efect_25":"easeInOutElastic",
+		// 	"efect_26":"easeInBack",
+		// 	"efect_27":"easeOutBack",
+		// 	"efect_28":"easeInOutBack",
+		// 	"efect_29":"easeInBounce",
+		// 	"efect_30":"easeOutBounce",
+		// 	"efect_31":"easeInOutBounce"
+		// };
+
+</script>
+</body>
+</html> 
