@@ -16,7 +16,7 @@
  <![endif]-->
 
 <style type="text/css">
-	body, html, *{padding: 0;border: none} /*reset*/
+	body, html, *{padding: 0;border: none; font-family: arial} /*reset*/
 	#app {position: relative; overflow: hidden; }
 	#app, div#slide, ul#list li {width: 640px;  height: 480px } /* heigth de la app */
 	div#slide { overflow: hidden; left:30px; }
@@ -27,12 +27,15 @@
 	a.btn:hover { background: rgba(100, 100, 100, 0.8); }
 	a.prev { left: 0}
 	a.next { right: 0}
+
+	a.view_github {position:static; color:#fff; background: #06f; text-decoration: none; font-weight: bold;}
+	a.view_github:hover {background: #069;}
 </style>
 
 </head>
 <body>
-
-
+<h1>Simple-slide.js</h1>
+<!-- template -->
 		<section id="app">
 			<a class="btn prev">PREV</a>
 			<div id="slide">
@@ -48,12 +51,14 @@
 			</div>
 			<a class="btn next">NEXT</a>
 		</section>
-			
+<!-- end template -->
 		
+		<br>
+		<a class="btn view_github" style="" href="https://github.com/cbertelegni/Simple-slide.js">View on Github: github.com/cbertelegni/Simple-slide.js</a>
 
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.3/jquery.easing.min.js"></script>
-<script src="simpleslide.min.js"></script>
+<script src="simpleslide.js"></script>
 
 <script type="text/javascript">
 
@@ -62,7 +67,9 @@
 			"ul" : $("ul#list"),
 			"next":$("a.next"),
 			"prev":$("a.prev"),
-			"efecto_animacion":"easeInOutElastic"
+			"efecto_animacion":"easeInOutElastic",
+			"beforeslide": function(){ console.log("Before Slide", this) }, // optional
+			"afterslide": function(){	console.log("After Slide", this, this.li_active) /* example */} // optional
 		}
 
 		var slide= simple_slide(config); //start slide

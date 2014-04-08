@@ -37,7 +37,9 @@ This is a simple template for slide.js
 			"ul" : $("ul#list"),
 			"next":$("a.next"),
 			"prev":$("a.prev"),
-			"efecto_animacion":"easeInOutElastic"
+			"efecto_animacion":"easeInOutElastic",
+			"beforeslide": function(){ console.log("Before Slide", this) }, // optional
+			"afterslide": function(){	console.log("After Slide", this) } // optional
 		}
 
 		var slide= simple_slide(config); //start slide
